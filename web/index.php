@@ -1,6 +1,7 @@
-// framework/index.php
 <?php
-$input = $_GET['name'];
+// framework/index.php
+$input = isset($_GET['name']) ? $_GET['name'] : 'World';
 
-printf('Hello %s', $input);
+header('Content-Type: text/html; charset=utf-8');
 
+printf('Hello %s', htmlspecialchars($input, ENT_QUOTES, 'UTF-8'));
