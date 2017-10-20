@@ -1,5 +1,5 @@
 <?php
-// framework/index.php
+// framework/front.php
 require_once __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\HttpFoundation\Request;
@@ -13,4 +13,4 @@ $response = new Response(sprintf('Hello %s', htmlspecialchars($input, ENT_QUOTES
 
 $response->send();
 
-$request = Request::create('/index.php?name=Fabien');
+$request = Request::create('/front.php?name=Fabien');
